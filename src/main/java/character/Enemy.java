@@ -12,4 +12,19 @@ public class Enemy extends Character{
     public String getEvilReasoning() {
         return evilReasoning;
     }
+
+    @Override
+    public String canMove() {
+        return "I am like a ballerina";
+    }
+
+    @Override
+    public String canTalk() {
+        return this.evilReasoning;
+    }
+
+    @Override
+    public String canAttack() {
+        return "Die! Die!!";
+    }
 }

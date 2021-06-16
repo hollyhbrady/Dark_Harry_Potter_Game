@@ -2,7 +2,7 @@ package character;
 
 import java.util.ArrayList;
 
-public class TraumatisedHero extends Character {
+public class TraumatisedHero extends Character implements IPerson{
 
 
     private AfflictionType afflictionType;
