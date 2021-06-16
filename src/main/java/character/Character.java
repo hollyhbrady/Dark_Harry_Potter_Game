@@ -35,4 +35,16 @@ public abstract class Character {
     public double getAccuracy() {
         return accuracy;
     }
+
+    public AttackType getPrimaryAttack() {
+        return primaryAttack;
+    }
+
+    public AttackType getSecondaryAttack() {
+        return secondaryAttack;
+    }
+
+    public String getWand() {
+        return wand;
+    }
 }

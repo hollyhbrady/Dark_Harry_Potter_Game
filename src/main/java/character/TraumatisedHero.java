@@ -10,10 +10,9 @@ public class TraumatisedHero extends Character implements IPerson{
 
     private AfflictionType afflictionType;
     private CharacterType characterType;
-    private AttackType primaryAttack;
-    private AttackType secondaryAttack;
+    private ArrayList<TreasureType> treasureCollection;
 
-    public TraumatisedHero(String name, double hP, double cP, double accuracy, String wand, AfflictionType afflictionType, CharacterType characterType, AttackType primaryAttack, AttackType secondaryAttack) {
+    public TraumatisedHero(String name, double hP, double cP, double accuracy, String wand,AttackType primaryAttack, AttackType secondaryAttack,  AfflictionType afflictionType, CharacterType characterType, ArrayList treasureCollection) {
         super(name, hP, cP, accuracy, wand, primaryAttack,secondaryAttack);
         this.afflictionType = afflictionType;
         this.characterType = characterType;
@@ -28,12 +27,19 @@ public class TraumatisedHero extends Character implements IPerson{
         return characterType;
     }
 
-    public AttackType getPrimaryAttack() {
-        return primaryAttack;
+    @Override
+    public String canMove() {
+        return "I am moving, look at my traumatised movement";
     }
 
-    public AttackType getSecondaryAttack() {
-        return secondaryAttack;
+    @Override
+    public String canTalk() {
+        return "I am talking, but due to my afflictions it may not be comprehensible";
+    }
+
+    @Override
+    public String canAttack() {
+        return "My therapist says I need to recover, but I all can do is ATTACK!";
     }
 
     public int getTreasureCollection() {

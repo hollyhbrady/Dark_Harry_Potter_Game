@@ -17,9 +17,8 @@ public class TraumatisedHeroTest {
 
     @Before
     public void before(){
-        spells = new ArrayList<>();
-        HarryPotter = new TraumatisedHero("Steven",70,50,0.6,"wand", spells, AfflictionType.PTSD, CharacterType.FIGHTER, AttackType.EXPELLIRAMUS, AttackType.SLASH);
-
+        treasureCollection = new ArrayList<>();
+        HarryPotter = new TraumatisedHero("Harry Potter",70,50,0.6,"holly-wand", AttackType.EXPELLIRAMUS, AttackType.SLASH, AfflictionType.PTSD, CharacterType.FIGHTER,  treasureCollection);
     }
 
     @Test
@@ -40,6 +39,35 @@ public class TraumatisedHeroTest {
     @Test
     public void heroHasAccuracy(){
         assertEquals(0.6, HarryPotter.getAccuracy(), 0.0);
+    }
+
+    @Test
+    public void heroHasWand(){
+        assertEquals("holly-wand", HarryPotter.getWand());
+    }
+
+    @Test
+    public void heroHasAffliction(){
+        assertEquals(AfflictionType.PTSD, HarryPotter.getAfflictionType());
+    }
+
+    @Test
+    public void heroHasCharacterType(){
+        assertEquals(CharacterType.FIGHTER, HarryPotter.getCharacterType());
+    }
+
+    @Test
+    public void heroHasPrimaryAttack(){
+        assertEquals(AttackType.EXPELLIRAMUS, HarryPotter.getPrimaryAttack());
+    }
+
+    @Test
+    public void heroHasSecondaryAttack(){
+        assertEquals(AttackType.SLASH, HarryPotter.getSecondaryAttack());
+    }
+    @Test
+    public void treasureCollectionStartsAtZero(){
+        assertEquals(0, HarryPotter.getTreasureCollection());
     }
 
 }
