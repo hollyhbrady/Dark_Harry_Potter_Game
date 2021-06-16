@@ -6,12 +6,18 @@ public abstract class Character {
     private double hP;
     private double cP;
     private double accuracy;
+    private String wand;
+    private AttackType primaryAttack;
+    private AttackType secondaryAttack;
 
-    public Character(String name, double hP, double cP, double accuracy) {
+    public Character(String name, double hP, double cP, double accuracy, String wand, AttackType primaryAttack, AttackType secondaryAttack) {
         this.name = name;
         this.hP = hP;
         this.cP = cP;
         this.accuracy = accuracy;
+        this.wand = wand;
+        this.primaryAttack = primaryAttack;
+        this.secondaryAttack = secondaryAttack;
     }
 
     public String getName() {

@@ -10,7 +10,10 @@ public enum AttackType {
     STAB(10),
     SLASH(20),
     SECTUMSEMPRA(30),
-    PROTEGO(20);
+    PROTEGO(20),
+    PETRIFY(50),
+    AVADAKEDAVRA(60),
+    DEMENTORSKISS(30);
 
     private final int attackPower;
 
