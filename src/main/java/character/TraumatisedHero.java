@@ -1,5 +1,8 @@
 package character;
 
+import rooms.Room;
+import rooms.TreasureType;
+
 import java.util.ArrayList;
 
 public class TraumatisedHero extends Character implements IPerson{
@@ -14,6 +17,7 @@ public class TraumatisedHero extends Character implements IPerson{
         super(name, hP, cP, accuracy, wand, primaryAttack,secondaryAttack);
         this.afflictionType = afflictionType;
         this.characterType = characterType;
+        this.treasureCollection = new ArrayList<>();
     }
 
     public AfflictionType getAfflictionType() {
@@ -30,5 +34,9 @@ public class TraumatisedHero extends Character implements IPerson{
 
     public AttackType getSecondaryAttack() {
         return secondaryAttack;
+    }
+
+    public int getTreasureCollection() {
+        return this.treasureCollection.size();
     }
 }

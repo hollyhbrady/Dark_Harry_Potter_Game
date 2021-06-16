@@ -4,6 +4,7 @@ import character.CharacterType;
 import character.TraumatisedHero;
 import org.junit.Before;
 import org.junit.Test;
+import rooms.TreasureType;
 
 import java.util.ArrayList;
 
@@ -12,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 public class TraumatisedHeroTest {
 
     private TraumatisedHero HarryPotter;
-    private ArrayList<ArrayList> spells;
+    private ArrayList<TreasureType> treasureCollection;
 
     @Before
     public void before(){
