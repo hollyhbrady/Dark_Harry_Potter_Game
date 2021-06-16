@@ -6,17 +6,17 @@ public class TraumatisedHero extends Character {
 
     private ArrayList<ArrayList> spells;
     private String wand;
-    private Affliction affliction;
+    private AfflictionType afflictionType;
     private CharacterType characterType;
     private AttackType primaryAttack;
     private AttackType secondaryAttack;
 
 
-    public TraumatisedHero(String name, double hP, double cP, float accuracy, String wand, Affliction affliction, CharacterType characterType, AttackType primaryAttack, AttackType secondaryAttack) {
+    public TraumatisedHero(String name, double hP, double cP, float accuracy, String wand, AfflictionType afflictionType, CharacterType characterType, AttackType primaryAttack, AttackType secondaryAttack) {
         super(name, hP, cP, accuracy);
         this.spells = new ArrayList<>();
         this.wand = wand;
-        this.affliction = affliction;
+        this.afflictionType = afflictionType;
         this.characterType = characterType;
         this.primaryAttack = primaryAttack;
         this.secondaryAttack = secondaryAttack;
