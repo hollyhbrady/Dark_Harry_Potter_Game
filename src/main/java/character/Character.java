@@ -5,9 +5,9 @@ public abstract class Character {
     private String name;
     private double hP;
     private double cP;
-    private float accuracy;
+    private double accuracy;
 
-    public Character(String name, double hP, double cP, float accuracy) {
+    public Character(String name, double hP, double cP, double accuracy) {
         this.name = name;
         this.hP = hP;
         this.cP = cP;
@@ -26,7 +26,7 @@ public abstract class Character {
         return hP;
     }
 
-    public float getAccuracy() {
+    public double getAccuracy() {
         return accuracy;
     }
 }
