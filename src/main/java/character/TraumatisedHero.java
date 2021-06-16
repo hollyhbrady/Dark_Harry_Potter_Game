@@ -45,4 +45,9 @@ public class TraumatisedHero extends Character implements IPerson{
     public int getTreasureCollection() {
         return this.treasureCollection.size();
     }
+
+    public void takeTreasure(Room room, TreasureType treasure){
+        room.removeTreasure(treasure);
+        this.treasureCollection.add(treasure);
+    }
 }
