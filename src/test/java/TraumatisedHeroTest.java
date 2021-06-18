@@ -41,4 +41,34 @@ public class TraumatisedHeroTest {
         assertEquals(0.6, HarryPotter.getAccuracy(), 0.0);
     }
 
+    @Test
+    public void heroHasWand(){
+        assertEquals("holly-wand", HarryPotter.getWand());
+    }
+
+    @Test
+    public void heroHasAffliction(){
+        assertEquals(AfflictionType.PTSD, HarryPotter.getAfflictionType());
+    }
+
+    @Test
+    public void heroHasCharacterType(){
+        assertEquals(CharacterType.FIGHTER, HarryPotter.getCharacterType());
+    }
+
+    @Test
+    public void heroHasPrimaryAttack(){
+        assertEquals(AttackType.EXPELLIRAMUS, HarryPotter.getPrimaryAttack());
+    }
+
+    @Test
+    public void heroHasSecondaryAttack(){
+        assertEquals(AttackType.SLASH, HarryPotter.getSecondaryAttack());
+    }
+
+    @Test
+    public void treasureCollectionStartsAtZero(){
+        assertEquals(0, HarryPotter.getTreasureCollection());
+    }
+
 }

@@ -40,6 +40,10 @@ public abstract class Character {
         return this.primaryAttack;
     }
 
+    public double getPrimaryAttackPower() {
+        return this.getPrimaryAttack().getAttackPower();
+    }
+
     public AttackType getSecondaryAttack() {
         return secondaryAttack;
     }

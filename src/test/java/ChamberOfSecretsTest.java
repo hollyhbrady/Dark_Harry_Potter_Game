@@ -72,4 +72,10 @@ public class ChamberOfSecretsTest {
         assertEquals(0, chamberOfSecrets.getTreasure().size());
         assertEquals(1,HarryPotter.getTreasureCollection());
     }
+
+    @Test
+    public void HeroAndEnemyCanFight(){
+        HarryPotter.canAttack(basilisk);
+        assertEquals(50, basilisk.gethP(), 0.0);
+    }
 }

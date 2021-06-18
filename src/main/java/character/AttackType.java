@@ -20,4 +20,8 @@ public enum AttackType {
     AttackType(int attackPower) {
         this.attackPower = attackPower;
     }
+
+    public int getAttackPower() {
+        return attackPower;
+    }
 }
