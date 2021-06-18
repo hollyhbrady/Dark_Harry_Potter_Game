@@ -28,4 +28,16 @@ public enum TreasureType {
         this.cPRestore = cPRestore;
     }
 
+    public int getTreasureValue() {
+        return treasureValue;
+    }
+
+    public int gethPRestore() {
+        return hPRestore;
+    }
+
+    public int getcPRestore() {
+        return cPRestore;
+    }
+
 }
