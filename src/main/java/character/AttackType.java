@@ -8,7 +8,7 @@ public enum AttackType {
     FIREBLAST(50),
     BITE(20),
     STAB(10),
-    SLASH(20),
+    SLASH(30),
     SECTUMSEMPRA(30),
     PROTEGO(20),
     PETRIFY(50),

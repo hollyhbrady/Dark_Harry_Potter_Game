@@ -44,10 +44,6 @@ public abstract class Character {
         return this.getPrimaryAttack().getAttackPower();
     }
 
-    public double getPrimaryAttackPower() {
-        return this.getPrimaryAttack().getAttackPower();
-    }
-
     public AttackType getSecondaryAttack() {
         return secondaryAttack;
     }
@@ -58,5 +54,15 @@ public abstract class Character {
 
     public void sethP(double hP) {
         this.hP = hP;
+    }
+
+    public AttackType chooseAttack(AttackType attack) {
+        AttackType first = getPrimaryAttack();
+
+        if (attack == first) {
+            return getPrimaryAttack();
+        }
+        return getSecondaryAttack();
+
     }
 }

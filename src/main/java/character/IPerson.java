@@ -4,5 +4,5 @@ public interface IPerson {
 
     String canMove();
     String canTalk();
-    double canAttack(Character character);
+    double canAttack(Character character, AttackType attack);
 }
