@@ -106,6 +106,20 @@ public class TraumatisedHeroTest {
         assertEquals("[GAUNTSRING, SLYTHERSCAG, GRYFFINBLOW]", HarryPotter.checkTreasure(treasureCollection));
         System.out.println(HarryPotter.checkTreasure(treasureCollection));
     }
+
+    @Test
+    public void canUseHPBooster(){
+        treasureCollection.add(gryffinblow);
+        HarryPotter.usePerformanceEnhancers(gryffinblow);
+        assertEquals(80, HarryPotter.gethP(), 0.00);
+    }
+
+    @Test
+    public void canUseCPBooster(){
+        treasureCollection.add(slytherscag);
+        HarryPotter.usePerformanceEnhancers(slytherscag);
+        assertEquals(70, HarryPotter.getcP(), 0.00);
+    }
 }
 
 

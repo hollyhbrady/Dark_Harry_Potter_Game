@@ -68,7 +68,22 @@ public class TraumatisedHero extends Character implements IPerson{
     public String checkTreasure(ArrayList treasureCollection){
         String str = treasureCollection.toString();
         return str;
+    }
+
+    public double usePerformanceEnhancers(TreasureType drug) {
+        if (drug.gethPRestore() > 0) {
+            double hPAdjustment = this.gethP() + drug.gethPRestore();
+            this.sethP(hPAdjustment);
+        } else if
+            (drug.getcPRestore() > 0){
+            double cPAdjustment = this.getcP() + drug.getcPRestore();
+            this.setcP(cPAdjustment);
+            }
+            return 0;
         }
+    }
+
+
 
 }
 
