@@ -15,7 +15,7 @@ public abstract class Room {
     private TraumatisedHero traumatisedHero;
     private AfflictionType roomAffliction;
 
-    public Room(String name, Enemy enemy, String characteristic, ArrayList treasureCollection, TraumatisedHero traumatisedHero){
+    public Room(String name, Enemy enemy, String characteristic, ArrayList treasureCollection, TraumatisedHero traumatisedHero, AfflictionType roomAffliction){
         this.name = name;
         this.enemy = enemy;
         this.characteristic = characteristic;

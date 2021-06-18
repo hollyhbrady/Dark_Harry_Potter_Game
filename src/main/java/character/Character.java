@@ -63,7 +63,6 @@ public abstract class Character {
             return getPrimaryAttack();
         }
         return getSecondaryAttack();
-
     }
 
     public void setcP(double value){

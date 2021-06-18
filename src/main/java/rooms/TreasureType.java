@@ -19,9 +19,13 @@ public enum TreasureType {
     PUMPKINJUICEUP(0,0,20);
 
     private final int treasureValue;
+    private final int hPRestore;
+    private final int cPRestore;
 
-    TreasureType(int treasureValue){
+    TreasureType(int treasureValue, int hPRestore, int cPRestore){
         this.treasureValue = treasureValue;
+        this.hPRestore = hPRestore;
+        this.cPRestore = cPRestore;
     }
 
 }
