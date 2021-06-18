@@ -6,4 +6,6 @@ public interface IPerson {
     String canTalk();
 
     double canAttack(Character character, AttackType attack);
+
+    double reduceCP(AttackType attack);
 }

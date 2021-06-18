@@ -122,6 +122,7 @@ public class TraumatisedHeroTest {
         assertEquals(70, HarryPotter.getcP(), 0.00);
         assertEquals(0, HarryPotter.getTreasureCollection());
     }
+
 }
 
 

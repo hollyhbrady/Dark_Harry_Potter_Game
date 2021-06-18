@@ -76,10 +76,12 @@ public class ChamberOfSecretsTest {
     }
 
     @Test
-    public void HeroAndEnemyCanFight(){
+    public void HeroAndEnemyCanFightPrimary(){
         AttackType damage = AttackType.EXPELLIRAMUS;
         HarryPotter.canAttack(basilisk, damage);
         assertEquals(50, basilisk.gethP(), 0.0);
+        assertEquals(45, HarryPotter.getcP(), 0.0);
+        System.out.println(HarryPotter.getcP());
     }
 
     @Test

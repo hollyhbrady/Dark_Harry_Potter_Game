@@ -43,7 +43,19 @@ public class TraumatisedHero extends Character implements IPerson {
         double damage = this.chooseAttack(attack).getAttackPower();
         double result = health - damage;
         character.sethP(result);
+        reduceCP(attack);
         return character.gethP();
+    }
+
+    public double reduceCP(AttackType attack){
+        if(attack == this.getPrimaryAttack()){
+            double cpReduce = getcP() - 5;
+            setcP(cpReduce);
+        } else {
+            double cpReduce = getcP() - 3;
+            setcP(cpReduce);
+        }
+        return 0;
     }
 
     public int getTreasureCollection() {
