@@ -14,9 +14,15 @@ public class TraumatisedHeroTest {
 
     private TraumatisedHero HarryPotter;
     private ArrayList<TreasureType> treasureCollection;
+    private TreasureType ring;
+    private TreasureType gryffinblow;
+    private TreasureType slytherscag;
 
     @Before
-    public void before(){
+    public void before() {
+        gryffinblow = TreasureType.GRYFFINBLOW;
+        slytherscag = TreasureType.SLYTHERSCAG;
+        ring = TreasureType.GAUNTSRING;
         treasureCollection = new ArrayList<>();
         HarryPotter = new TraumatisedHero("Harry Potter", 70, 50, 0.6, "holly-wand", AttackType.EXPELLIRAMUS, AttackType.SLASH, AfflictionType.PTSD, CharacterType.FIGHTER, treasureCollection);
     }

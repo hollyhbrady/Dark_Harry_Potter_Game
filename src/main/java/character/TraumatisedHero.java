@@ -54,4 +54,21 @@ public class TraumatisedHero extends Character implements IPerson{
         room.removeTreasure(treasure);
         this.treasureCollection.add(treasure);
     }
+
+//    public String checkTreasure(ArrayList treasureCollection){
+//        ArrayList stringArray = new ArrayList<>();
+//        for (Object treasure : treasureCollection) {
+//            stringArray.add(treasure);
+////            stringArray.add(" ");
+//        }
+//        String str = stringArray.toString();
+//        return str;
+//    }
+
+    public String checkTreasure(ArrayList treasureCollection){
+        String str = treasureCollection.toString();
+        return str;
+        }
+
 }
+
