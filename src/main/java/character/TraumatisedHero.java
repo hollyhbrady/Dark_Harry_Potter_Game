@@ -38,8 +38,15 @@ public class TraumatisedHero extends Character implements IPerson{
     }
 
     @Override
-    public String canAttack() {
-        return "My therapist says I need to recover, but I all can do is ATTACK!";
+    public double canAttack(Character character) {
+        double health = character.gethP();
+        double attack = this.getPrimaryAttackPower();
+        double result = health - attack;
+        character.sethP(result);
+        return character.gethP();
+
+
+//       return character.gethP() -= this.getPrimaryAttackPower();
     }
 
     public int getTreasureCollection() {

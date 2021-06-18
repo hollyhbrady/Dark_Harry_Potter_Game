@@ -37,7 +37,7 @@ public abstract class Character {
     }
 
     public AttackType getPrimaryAttack() {
-        return primaryAttack;
+        return this.primaryAttack;
     }
 
     public AttackType getSecondaryAttack() {
@@ -46,5 +46,9 @@ public abstract class Character {
 
     public String getWand() {
         return wand;
+    }
+
+    public void sethP(double hP) {
+        this.hP = hP;
     }
 }
