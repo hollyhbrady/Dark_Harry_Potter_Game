@@ -112,6 +112,7 @@ public class TraumatisedHeroTest {
         treasureCollection.add(gryffinblow);
         HarryPotter.usePerformanceEnhancers(gryffinblow);
         assertEquals(80, HarryPotter.gethP(), 0.00);
+        assertEquals(0, HarryPotter.getTreasureCollection());
     }
 
     @Test
@@ -119,6 +120,7 @@ public class TraumatisedHeroTest {
         treasureCollection.add(slytherscag);
         HarryPotter.usePerformanceEnhancers(slytherscag);
         assertEquals(70, HarryPotter.getcP(), 0.00);
+        assertEquals(0, HarryPotter.getTreasureCollection());
     }
 }
 

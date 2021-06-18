@@ -78,6 +78,7 @@ public class TraumatisedHero extends Character implements IPerson{
             (drug.getcPRestore() > 0){
             double cPAdjustment = this.getcP() + drug.getcPRestore();
             this.setcP(cPAdjustment);
+            treasureCollection.remove(drug);
             }
             return 0;
         }
