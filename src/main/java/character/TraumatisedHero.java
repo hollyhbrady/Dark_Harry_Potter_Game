@@ -38,15 +38,12 @@ public class TraumatisedHero extends Character implements IPerson{
     }
 
     @Override
-    public double canAttack(Character character) {
+    public double canAttack(Character character, AttackType attack) {
         double health = character.gethP();
         double attack = this.getPrimaryAttackPower();
         double result = health - attack;
         character.sethP(result);
         return character.gethP();
-
-
-//       return character.gethP() -= this.getPrimaryAttackPower();
     }
 
     public int getTreasureCollection() {
