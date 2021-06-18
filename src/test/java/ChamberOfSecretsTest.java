@@ -85,6 +85,15 @@ public class ChamberOfSecretsTest {
     }
 
     @Test
+    public void HeroAndEnemyCanFightSecondary(){
+        AttackType damage = AttackType.SLASH;
+        HarryPotter.canAttack(basilisk, damage);
+        assertEquals(40, basilisk.gethP(), 0.0);
+        assertEquals(47, HarryPotter.getcP(), 0.0);
+        System.out.println(HarryPotter.getcP());
+    }
+
+    @Test
     public void canGetRoomAffliction(){
         assertEquals(AfflictionType.PTSD, chamberOfSecrets.getRoomAffliction());
     }
