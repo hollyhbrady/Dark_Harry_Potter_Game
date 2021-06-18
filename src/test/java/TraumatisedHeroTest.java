@@ -71,4 +71,15 @@ public class TraumatisedHeroTest {
         assertEquals(0, HarryPotter.getTreasureCollection());
     }
 
+    @Test
+    public void canChoosePrimaryAttack(){
+        AttackType first = AttackType.EXPELLIRAMUS;
+        assertEquals(AttackType.EXPELLIRAMUS, HarryPotter.chooseAttack(first));
+    }
+    @Test
+    public void canChooseSecondaryAttack(){
+        AttackType second = AttackType.SLASH;
+        assertEquals(AttackType.SLASH, HarryPotter.chooseAttack(second));
+    }
+
 }

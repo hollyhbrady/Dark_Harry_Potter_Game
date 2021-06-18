@@ -26,8 +26,8 @@ public class Enemy extends Character implements IPerson {
     @Override
     public double canAttack(Character character) {
         double health = character.gethP();
-        double attack = this.getPrimaryAttackPower();
-        double result = health - attack;
+        double damage = this.chooseAttack(attack).getAttackPower();
+        double result = health - damage;
         character.sethP(result);
         return character.gethP();
     }
