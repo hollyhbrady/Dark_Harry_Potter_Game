@@ -55,4 +55,10 @@ public abstract class Room {
     public void removeTreasure(TreasureType treasure){
         this.treasureCollection.remove(treasure);
     }
+    public void afflictHero(TraumatisedHero hero){
+        if (hero.getAfflictionType() == this.roomAffliction){
+            hero.setcP(hero.getcP() * .8);
+
+        }
+    }
 }

@@ -87,4 +87,10 @@ public class ChamberOfSecretsTest {
         assertEquals(AfflictionType.PTSD, chamberOfSecrets.getRoomAffliction());
     }
 
+    @Test
+    public void roomCanAfflictHero(){
+        chamberOfSecrets.afflictHero(HarryPotter);
+        assertEquals(40, HarryPotter.getcP(), 0.00);
+    }
+
 }

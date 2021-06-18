@@ -65,4 +65,9 @@ public abstract class Character {
         return getSecondaryAttack();
 
     }
+
+    public void setcP(double value){
+        this.cP = value;
+    };
+
 }
