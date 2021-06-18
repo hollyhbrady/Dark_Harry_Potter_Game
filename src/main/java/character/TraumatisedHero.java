@@ -5,15 +5,15 @@ import rooms.TreasureType;
 
 import java.util.ArrayList;
 
-public class TraumatisedHero extends Character implements IPerson{
+public class TraumatisedHero extends Character implements IPerson {
 
 
     private AfflictionType afflictionType;
     private CharacterType characterType;
     private ArrayList<TreasureType> treasureCollection;
 
-    public TraumatisedHero(String name, double hP, double cP, double accuracy, String wand,AttackType primaryAttack, AttackType secondaryAttack,  AfflictionType afflictionType, CharacterType characterType, ArrayList treasureCollection) {
-        super(name, hP, cP, accuracy, wand, primaryAttack,secondaryAttack);
+    public TraumatisedHero(String name, double hP, double cP, double accuracy, String wand, AttackType primaryAttack, AttackType secondaryAttack, AfflictionType afflictionType, CharacterType characterType, ArrayList treasureCollection) {
+        super(name, hP, cP, accuracy, wand, primaryAttack, secondaryAttack);
         this.afflictionType = afflictionType;
         this.characterType = characterType;
         this.treasureCollection = new ArrayList<>();
@@ -50,7 +50,7 @@ public class TraumatisedHero extends Character implements IPerson{
         return this.treasureCollection.size();
     }
 
-    public void takeTreasure(Room room, TreasureType treasure){
+    public void takeTreasure(Room room, TreasureType treasure) {
         room.removeTreasure(treasure);
         this.treasureCollection.add(treasure);
     }
@@ -65,7 +65,7 @@ public class TraumatisedHero extends Character implements IPerson{
 //        return str;
 //    }
 
-    public String checkTreasure(ArrayList treasureCollection){
+    public String checkTreasure(ArrayList treasureCollection) {
         String str = treasureCollection.toString();
         return str;
     }
@@ -74,6 +74,7 @@ public class TraumatisedHero extends Character implements IPerson{
         if (drug.gethPRestore() > 0) {
             double hPAdjustment = this.gethP() + drug.gethPRestore();
             this.sethP(hPAdjustment);
+            treasureCollection.remove(drug);
         } else if
             (drug.getcPRestore() > 0){
             double cPAdjustment = this.getcP() + drug.getcPRestore();
@@ -84,7 +85,4 @@ public class TraumatisedHero extends Character implements IPerson{
         }
     }
 
-
-
-}
 
