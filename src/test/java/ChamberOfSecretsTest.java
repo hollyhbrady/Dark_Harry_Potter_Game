@@ -18,14 +18,16 @@ public class ChamberOfSecretsTest {
     private TreasureType ring;
     private ArrayList<TreasureType> treasureCollection;
     private TraumatisedHero HarryPotter;
+    private AfflictionType roomAffliction;
 
     @Before
     public void before(){
+        roomAffliction = AfflictionType.PTSD;
         ring = TreasureType.GAUNTSRING;
         HarryPotter = new TraumatisedHero("Harry Potter",70,50,0.6,"holly-wand", AttackType.EXPELLIRAMUS, AttackType.SLASH, AfflictionType.PTSD, CharacterType.FIGHTER,  treasureCollection);
         treasure = new ArrayList<TreasureType>();
         basilisk = new Enemy("Basilisk",70,60,0.5,"Who needs a wand pussies?", AttackType.BITE, AttackType.PETRIFY, "I am a snakey snake!");
-        chamberOfSecrets = new ChamberOfSecrets("Chamber of Secrets", basilisk, "Wet, slimy and has a great bloody snek!", treasure, HarryPotter);
+        chamberOfSecrets = new ChamberOfSecrets("Chamber of Secrets", basilisk, "Wet, slimy and has a great bloody snek!", treasure, HarryPotter, roomAffliction);
     }
 
     @Test
@@ -79,4 +81,10 @@ public class ChamberOfSecretsTest {
         HarryPotter.canAttack(basilisk, damage);
         assertEquals(50, basilisk.gethP(), 0.0);
     }
+
+    @Test
+    public void canGetRoomAffliction(){
+        assertEquals(AfflictionType.PTSD, chamberOfSecrets.getRoomAffliction());
+    }
+
 }
