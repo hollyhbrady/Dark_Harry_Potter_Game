@@ -55,19 +55,23 @@ public abstract class Room {
 
 //    Check with instructors on Monday
 
-//    public int removeTreasure(Character character, TreasureType treasure, Room room) {
-//        if (enemy.personHpZero(enemy) == true) {
-//            room.emptyRoomTreasure(room, treasure);
-//        }
-//        return 0;
-//    }
+    public void removeTreasure(Enemy enemy){
+        if (enemy.personHpZero(enemy) && treasureHoard.size() > 0) {
+            for ( TreasureType treasureItem : this.treasureHoard) {
+                this.treasureHoard.remove(treasureItem);
+                traumatisedHero.takeTreasure(treasureItem);
+            }
+        }
+    }
+
 
 //    Issue with For Loop, ; expected 67, loop doesn't recognise what treasure is.
 
-//    public int emptyRoomTreasure(Room room, TreasureType treasure) {
-//        for (treasure: treasureCollection){
-////            if (treasureCollection.size() > 0) {
-//            traumatisedHero.takeTreasure(room, treasure);
+//    public void emptyRoomTreasure(Room room, TreasureType treasure) {
+//        for (treasure:treasureHoard) {
+//            if (treasureHoard.size() > 0) {
+//                traumatisedHero.takeTreasure(room, treasure);
+//            }
 //        }
 //    }
 
@@ -77,7 +81,3 @@ public abstract class Room {
         }
     }
 }
-
-
-
-

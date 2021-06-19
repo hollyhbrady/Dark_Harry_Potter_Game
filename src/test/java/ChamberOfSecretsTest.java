@@ -19,6 +19,7 @@ public class ChamberOfSecretsTest {
     private ArrayList<TreasureType> treasureCollection;
     private TraumatisedHero HarryPotter;
     private AfflictionType roomAffliction;
+    private TreasureType tiara;
 
     @Before
     public void before(){
@@ -60,12 +61,17 @@ public class ChamberOfSecretsTest {
         chamberOfSecrets.addTreasure(ring);
         assertEquals(1, chamberOfSecrets.getTreasure().size());
     }
-//    @Test
-//    public void roomCanRemoveTreasure(){
-//        chamberOfSecrets.addTreasure(ring);
-//        chamberOfSecrets.removeTreasure(ring);
-//        assertEquals(0, chamberOfSecrets.getTreasure().size());
-//    }
+    @Test
+    public void roomCanRemoveTreasure(){
+        chamberOfSecrets.addTreasure(ring);
+        chamberOfSecrets.addTreasure(tiara);
+        basilisk.sethP(0);
+        chamberOfSecrets.removeTreasure(basilisk, treasureHoard);
+        assertEquals(2, HarryPotter.getTreasureCollection());
+        assertEquals(0, chamberOfSecrets.getTreasure().size());
+        System.out.println(HarryPotter.getTreasureCollection());
+        System.out.println(chamberOfSecrets.getTreasure().size());
+    }
 //
 //    @Test
 //    public void traumatisedHeroCanTakeTreasureFromRoom(){

@@ -11,6 +11,7 @@ public class TraumatisedHero extends Character implements IPerson {
     private AfflictionType afflictionType;
     private CharacterType characterType;
     private ArrayList<TreasureType> treasureCollection;
+    private TreasureType treasureType;
 
     public TraumatisedHero(String name, double hP, double cP, double accuracy, String wand, AttackType primaryAttack, AttackType secondaryAttack, AfflictionType afflictionType, CharacterType characterType, ArrayList treasureCollection) {
         super(name, hP, cP, accuracy, wand, primaryAttack, secondaryAttack);
@@ -76,10 +77,10 @@ public class TraumatisedHero extends Character implements IPerson {
         return this.treasureCollection.size();
     }
 
-//    public void takeTreasure(Room room, TreasureType treasure) {
+    public void takeTreasure(TreasureType treasureItem) {
 //        room.removeTreasure(treasure);
-//        this.treasureCollection.add(treasure);
-//    }
+        this.treasureCollection.add(treasureItem);
+    }
 
 //    public String checkTreasure(ArrayList treasureCollection){
 //        ArrayList stringArray = new ArrayList<>();
@@ -91,7 +92,7 @@ public class TraumatisedHero extends Character implements IPerson {
 //        return str;
 //    }
 
-    public String checkTreasure(ArrayList treasureCollection) {
+    public String checkTreasure(ArrayList treasureCollection){
         String str = treasureCollection.toString();
         return str;
     }
@@ -115,5 +116,6 @@ public class TraumatisedHero extends Character implements IPerson {
         return false;
     }
 }
+
 
 
