@@ -57,12 +57,12 @@ public abstract class Room {
 
     public void removeTreasure(Enemy enemy){
         if (enemy.personHpZero(enemy) && treasureHoard.size() > 0) {
-            for ( TreasureType treasureItem : this.treasureHoard) {
-                this.treasureHoard.remove(treasureItem);
-                traumatisedHero.takeTreasure(treasureItem);
+//            for ( TreasureType treasureItem : this.treasureHoard) {
+               traumatisedHero.takeTreasure(this.treasureHoard);
+               this.treasureHoard.clear();
             }
         }
-    }
+
 
 
 //    Issue with For Loop, ; expected 67, loop doesn't recognise what treasure is.

@@ -66,11 +66,12 @@ public class ChamberOfSecretsTest {
         chamberOfSecrets.addTreasure(ring);
         chamberOfSecrets.addTreasure(tiara);
         basilisk.sethP(0);
-        chamberOfSecrets.removeTreasure(basilisk, treasureHoard);
-        assertEquals(2, HarryPotter.getTreasureCollection());
+        chamberOfSecrets.removeTreasure(basilisk);
         assertEquals(0, chamberOfSecrets.getTreasure().size());
-        System.out.println(HarryPotter.getTreasureCollection());
+        assertEquals(2, HarryPotter.getTreasureCollection());
         System.out.println(chamberOfSecrets.getTreasure().size());
+        System.out.println(HarryPotter.getTreasureCollection());
+
     }
 //
 //    @Test
