@@ -3,6 +3,7 @@ package character;
 public interface IPerson {
 
     String canMove();
+
     String canTalk();
 
     double canAttack(Character character, AttackType attack);
@@ -10,4 +11,6 @@ public interface IPerson {
     double reduceCP(AttackType attack);
 
     boolean personHpZero(Character character);
+
+    boolean applyAccuracy();
 }

@@ -10,16 +10,17 @@ public abstract class Room {
 
     private String name;
     private Enemy enemy;
+    private Character character;
     private String characteristic;
-    private ArrayList<TreasureType> treasureCollection;
+    private ArrayList<TreasureType> treasureHoard;
     private TraumatisedHero traumatisedHero;
     private AfflictionType roomAffliction;
 
-    public Room(String name, Enemy enemy, String characteristic, ArrayList treasureCollection, TraumatisedHero traumatisedHero, AfflictionType roomAffliction){
+    public Room(String name, Enemy enemy, String characteristic, ArrayList treasureHoard, TraumatisedHero traumatisedHero, AfflictionType roomAffliction) {
         this.name = name;
         this.enemy = enemy;
         this.characteristic = characteristic;
-        this.treasureCollection = new ArrayList<>();
+        this.treasureHoard = new ArrayList<>();
         this.traumatisedHero = traumatisedHero;
         this.roomAffliction = roomAffliction;
     }
@@ -37,7 +38,7 @@ public abstract class Room {
     }
 
     public ArrayList<TreasureType> getTreasure() {
-        return treasureCollection;
+        return treasureHoard;
     }
 
     public TraumatisedHero getTraumatisedHero() {
@@ -48,8 +49,8 @@ public abstract class Room {
         return roomAffliction;
     }
 
-    public void addTreasure(TreasureType treasure){
-        this.treasureCollection.add(treasure);
+    public void addTreasure(TreasureType treasure) {
+        this.treasureHoard.add(treasure);
     }
 
 //    Check with instructors on Monday
@@ -76,3 +77,7 @@ public abstract class Room {
         }
     }
 }
+
+
+
+

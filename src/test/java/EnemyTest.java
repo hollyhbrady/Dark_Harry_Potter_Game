@@ -1,6 +1,8 @@
 import character.*;
 import org.junit.Before;
 import org.junit.Test;
+import rooms.Room;
+import rooms.TreasureType;
 
 import java.lang.Character;
 import java.util.ArrayList;
@@ -11,10 +13,14 @@ import static org.junit.Assert.assertNotEquals;
 public class EnemyTest {
 
     private Enemy voldemort;
+    private TraumatisedHero HarryPotter;
+    private ArrayList <TreasureType> treasureCollection;
 
     @Before
     public void before(){
-        voldemort = new Enemy("Voldemort", 100,80,0.7, "Phoenix Wand", AttackType.AVADAKEDAVRA, AttackType.SECTUMSEMPRA, "MY MUM ABANDONED ME IN A MUGGLE ORPHANAGE!" );
+    voldemort = new Enemy("Voldemort", 100,80,0.7, "Phoenix Wand", AttackType.AVADAKEDAVRA, AttackType.SECTUMSEMPRA, "MY MUM ABANDONED ME IN A MUGGLE ORPHANAGE!" );
+    HarryPotter = new TraumatisedHero("Harry Potter",70,50,0.6,"holly-wand", AttackType.EXPELLIRAMUS, AttackType.SLASH, AfflictionType.PTSD, CharacterType.FIGHTER,  treasureCollection);
+    treasureCollection = new ArrayList<>();
     }
 
     @Test

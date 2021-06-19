@@ -36,6 +36,16 @@ public class TraumatisedHero extends Character implements IPerson {
     public String canTalk() {
         return "I am talking, but due to my afflictions it may not be comprehensible";
     }
+    @Override
+
+    public boolean applyAccuracy(){
+        double random = Math.random();
+        System.out.println(random);
+        if (random <= this.getAccuracy()){
+            return true;
+        }
+        return false;
+    }
 
     @Override
     public double canAttack(Character character, AttackType attack) {
@@ -45,6 +55,7 @@ public class TraumatisedHero extends Character implements IPerson {
         double health = character.gethP();
         double damage = this.chooseAttack(attack).getAttackPower();
         double result = health - damage;
+
         character.sethP(result);
         reduceCP(attack);
         return character.gethP();

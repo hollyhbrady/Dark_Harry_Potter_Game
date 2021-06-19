@@ -32,13 +32,23 @@ public class Enemy extends Character implements IPerson {
             return this.getSecondaryAttack();
         }
         return null;
-
     }
-    ;
+
+    @Override
+    public boolean applyAccuracy() {
+        double random = Math.random();
+        System.out.println(random);
+        if (random <= this.getAccuracy()){
+            return true;
+        }
+        return false;
+    }
 
     @Override
     public double canAttack(Character character, AttackType attack) {
-
+        if (this.applyAccuracy() == false){
+            return 0;
+        }
         double health = character.gethP();
 //        double damage = random;
 //        double damage = this.chooseAttack(random).getAttackPower();
