@@ -1,11 +1,12 @@
-import character.AttackType;
-import character.Enemy;
+import character.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.Character;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class EnemyTest {
 
@@ -25,6 +26,15 @@ public class EnemyTest {
     public void canMove(){
         assertEquals("I am like a ballerina", voldemort.canMove());
     }
+
+    @Test
+    public void enemyCanAttackHero(){
+        AttackType attack = voldemort.chooseAttack();
+        double hurtHarry = voldemort.canAttack(HarryPotter, attack);
+        assertNotEquals(70,HarryPotter.gethP(), 0.00 );
+        System.out.println(HarryPotter.gethP());
+    }
+//    Question why is math random generating two numbers?
 
 //    @Test
 //    public void canAttack(){

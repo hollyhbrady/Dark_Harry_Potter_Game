@@ -62,10 +62,10 @@ public class TraumatisedHero extends Character implements IPerson {
         return this.treasureCollection.size();
     }
 
-    public void takeTreasure(Room room, TreasureType treasure) {
-        room.removeTreasure(treasure);
-        this.treasureCollection.add(treasure);
-    }
+//    public void takeTreasure(Room room, TreasureType treasure) {
+//        room.removeTreasure(treasure);
+//        this.treasureCollection.add(treasure);
+//    }
 
 //    public String checkTreasure(ArrayList treasureCollection){
 //        ArrayList stringArray = new ArrayList<>();
@@ -95,6 +95,11 @@ public class TraumatisedHero extends Character implements IPerson {
             }
             return 0;
         }
+
+    @Override
+    public boolean personHpZero(Character character) {
+        return false;
     }
+}
 
 

@@ -46,4 +46,27 @@ public class Enemy extends Character implements IPerson {
         character.sethP(result);
         return character.gethP();
     }
-}
+
+    public double reduceCP(AttackType attack){
+        if(attack == this.getPrimaryAttack()){
+            double cpReduce = getcP() - 5;
+            setcP(cpReduce);
+        } else {
+            double cpReduce = getcP() - 3;
+            setcP(cpReduce);
+        }
+        return 0;
+    }
+
+    @Override
+    public boolean personHpZero(Character character) {
+       if(character.gethP() <= 0){
+           return true;
+       }
+       return false;
+       }
+
+    }
+
+
+

@@ -52,11 +52,26 @@ public abstract class Room {
         this.treasureCollection.add(treasure);
     }
 
-    public void removeTreasure(TreasureType treasure){
-        this.treasureCollection.remove(treasure);
-    }
-    public void afflictHero(TraumatisedHero hero){
-        if (hero.getAfflictionType() == this.roomAffliction){
+//    Check with instructors on Monday
+
+//    public int removeTreasure(Character character, TreasureType treasure, Room room) {
+//        if (enemy.personHpZero(enemy) == true) {
+//            room.emptyRoomTreasure(room, treasure);
+//        }
+//        return 0;
+//    }
+
+//    Issue with For Loop, ; expected 67, loop doesn't recognise what treasure is.
+
+//    public int emptyRoomTreasure(Room room, TreasureType treasure) {
+//        for (treasure: treasureCollection){
+////            if (treasureCollection.size() > 0) {
+//            traumatisedHero.takeTreasure(room, treasure);
+//        }
+//    }
+
+    public void afflictHero(TraumatisedHero hero) {
+        if (hero.getAfflictionType() == this.roomAffliction) {
             hero.setcP(hero.getcP() * .8);
         }
     }

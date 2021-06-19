@@ -8,4 +8,6 @@ public interface IPerson {
     double canAttack(Character character, AttackType attack);
 
     double reduceCP(AttackType attack);
+
+    boolean personHpZero(Character character);
 }

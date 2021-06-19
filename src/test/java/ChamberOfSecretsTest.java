@@ -60,20 +60,20 @@ public class ChamberOfSecretsTest {
         chamberOfSecrets.addTreasure(ring);
         assertEquals(1, chamberOfSecrets.getTreasure().size());
     }
-    @Test
-    public void roomCanRemoveTreasure(){
-        chamberOfSecrets.addTreasure(ring);
-        chamberOfSecrets.removeTreasure(ring);
-        assertEquals(0, chamberOfSecrets.getTreasure().size());
-    }
-
-    @Test
-    public void traumatisedHeroCanTakeTreasureFromRoom(){
-        chamberOfSecrets.addTreasure(ring);
-        HarryPotter.takeTreasure(chamberOfSecrets,ring);
-        assertEquals(0, chamberOfSecrets.getTreasure().size());
-        assertEquals(1,HarryPotter.getTreasureCollection());
-    }
+//    @Test
+//    public void roomCanRemoveTreasure(){
+//        chamberOfSecrets.addTreasure(ring);
+//        chamberOfSecrets.removeTreasure(ring);
+//        assertEquals(0, chamberOfSecrets.getTreasure().size());
+//    }
+//
+//    @Test
+//    public void traumatisedHeroCanTakeTreasureFromRoom(){
+//        chamberOfSecrets.addTreasure(ring);
+//        HarryPotter.takeTreasure(chamberOfSecrets,ring);
+//        assertEquals(0, chamberOfSecrets.getTreasure().size());
+//        assertEquals(1,HarryPotter.getTreasureCollection());
+//    }
 
     @Test
     public void HeroAndEnemyCanFightPrimary(){
@@ -103,5 +103,7 @@ public class ChamberOfSecretsTest {
         chamberOfSecrets.afflictHero(HarryPotter);
         assertEquals(40, HarryPotter.getcP(), 0.00);
     }
+
+
 
 }
