@@ -39,6 +39,9 @@ public class TraumatisedHero extends Character implements IPerson {
 
     @Override
     public double canAttack(Character character, AttackType attack) {
+        if (this.applyAccuracy() == false){
+            return 0;
+        }
         double health = character.gethP();
         double damage = this.chooseAttack(attack).getAttackPower();
         double result = health - damage;
