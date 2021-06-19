@@ -14,7 +14,7 @@ public class ChamberOfSecretsTest {
     private ChamberOfSecrets chamberOfSecrets;
     private Enemy basilisk;
     private TreasureType treasureType;
-    private ArrayList<TreasureType> treasure;
+    private ArrayList<TreasureType> treasureHoard;
     private TreasureType ring;
     private ArrayList<TreasureType> treasureCollection;
     private TraumatisedHero HarryPotter;
@@ -25,9 +25,9 @@ public class ChamberOfSecretsTest {
         roomAffliction = AfflictionType.PTSD;
         ring = TreasureType.GAUNTSRING;
         HarryPotter = new TraumatisedHero("Harry Potter",70,50,0.6,"holly-wand", AttackType.EXPELLIRAMUS, AttackType.SLASH, AfflictionType.PTSD, CharacterType.FIGHTER,  treasureCollection);
-        treasure = new ArrayList<TreasureType>();
+        treasureHoard = new ArrayList<TreasureType>();
         basilisk = new Enemy("Basilisk",70,60,0.5,"Who needs a wand pussies?", AttackType.BITE, AttackType.PETRIFY, "I am a snakey snake!");
-        chamberOfSecrets = new ChamberOfSecrets("Chamber of Secrets", basilisk, "Wet, slimy and has a great bloody snek!", treasure, HarryPotter, roomAffliction);
+        chamberOfSecrets = new ChamberOfSecrets("Chamber of Secrets", basilisk, "Wet, slimy and has a great bloody snek!", treasureHoard, HarryPotter, roomAffliction);
     }
 
     @Test

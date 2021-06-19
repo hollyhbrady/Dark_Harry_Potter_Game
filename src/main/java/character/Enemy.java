@@ -22,12 +22,27 @@ public class Enemy extends Character implements IPerson {
     public String canTalk() {
         return this.evilReasoning;
     }
+    //    Question why is math random generating two numbers?
+    public AttackType chooseAttack(){
+        double generate = Math.random();
+        System.out.println(generate);
+        if (generate <= 0.5){
+             return this.getPrimaryAttack();
+        } else if(generate > 0.5) {
+            return this.getSecondaryAttack();
+        }
+        return null;
+
+    }
+    ;
 
     @Override
     public double canAttack(Character character, AttackType attack) {
+
         double health = character.gethP();
-        double damage = this.chooseAttack(attack).getAttackPower();
-        double result = health - damage;
+//        double damage = random;
+//        double damage = this.chooseAttack(random).getAttackPower();
+        double result = health - chooseAttack().getAttackPower();
         character.sethP(result);
         return character.gethP();
     }
